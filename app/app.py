@@ -24,9 +24,9 @@ with app.app_context():
 
 @app.route('/')
 def home_page():
-    return redirect(url_for('user_login'))
+    return render_template('Posts_page.jsx')
 
-@app.route('/posts', methods=['GET'])
+@app.route('/posts', methods=[''])
 def all_posts():
     posts = Post.query.join(User).all()
     return posts
@@ -51,7 +51,7 @@ def user_register():
         db.session.commit()
 
         flash('Account Created')
-        return redirect(url_for('user_login'))  # Assuming 'user_login' is the route for the login page
+        return redirect(url_for('user_login'))  
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -85,7 +85,6 @@ def create_post():
         db.session.commit()
         flash('Your post has been created!', 'success')
         return redirect(url_for('posts'))
-    # return render_template('Posts_page.jsx')
 
 @app.route('/delete_post/<int:post_id>', methods=['GET', 'POST'])
 def delete_post(post_id):
