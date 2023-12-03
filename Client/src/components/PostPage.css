@@ -1,0 +1,50 @@
+style {
+  postsPage {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  post {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+
+  post h3 {
+    margin-bottom: 10px;
+  }
+
+  post p {
+    margin-bottom: 0;
+  }
+
+  createPostForm {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+
+  createPostForm label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  createPostForm input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  createPostForm button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+}
